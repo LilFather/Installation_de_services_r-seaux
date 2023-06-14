@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="MIREY Kellian" />
+  <meta name="author" content="TAS Atilla" />
+  <meta name="keywords" content="Rapport, Markdown, Pandoc" />
+  <title>Rapport Final SAE 2.03</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+      html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Rapport Final SAE 2.03</h1>
+<p class="author">MIREY Kellian</p>
+<p class="author">TAS Atilla</p>
+<p class="date">3-26-2023</p>
+</header>
+<nav id="TOC">
+
+</nav>
+<h1 id="préparation-dune-machine-virtuelle-debian"><span class="header-section-number">1</span> Préparation d’une machine virtuelle Debian</h1>
+<p>Nous avons créé une machine virtuelle avec son système d’exploitation Debian 11 et l’environnement graphique MATE, et au moins 2 utilisateurs et quelques logiciels de départ.</p>
+<h2 id="caractéristiques"><span class="header-section-number">1.1</span> Caractéristiques</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Nom de la machine</th>
+<th>sae203</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Type</em></td>
+<td>Linux</td>
+</tr>
+<tr class="even">
+<td><em>Version</em></td>
+<td>Debian 11 64-bit</td>
+</tr>
+<tr class="odd">
+<td><em>Mémoire vive (RAM)</em></td>
+<td>2048 Mo</td>
+</tr>
+<tr class="even">
+<td><em>Disque dur</em></td>
+<td>20 Go</td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation"><span class="header-section-number">1.2</span> Installation</h2>
+<p>À l’aide de l’interface graphique de VirtualBox:</p>
+<ul>
+<li><p>[ ] Nom de la machine : <code>serveur</code></p></li>
+<li><p>[ ] Domaine : <code>-</code></p></li>
+<li><p>[ ] Pays / Langue : <code>France</code></p></li>
+<li><p>[ ] Miroir : <a href="http://debian.polytech-lille.fr" class="uri">http://debian.polytech-lille.fr</a></p></li>
+<li><p>[ ] Proxy : <a href="http://cache.univ-lille.fr:3128" class="uri">http://cache.univ-lille.fr:3128</a></p></li>
+<li>[ ] Compte administrateur :
+<ul>
+<li>[x] login : <code>root</code></li>
+<li>[x] mot de passe : <code>root</code></li>
+</ul></li>
+<li>[ ] Compte utilisateur :
+<ul>
+<li>[x] nom : <code>User</code></li>
+<li>[x] login : <code>user</code></li>
+<li>[x] mot de passe : <code>user</code></li>
+</ul></li>
+<li><p>[ ] 1 seule partition pour tout le disque</p></li>
+<li>[ ] Logiciels de démarrage :
+<ul>
+<li>[x] environnement de bureau Debian</li>
+<li>[x] MATE</li>
+<li>[x] serveur web</li>
+<li>[x] serveur ssh</li>
+<li>[x] utilitaire usuels du système</li>
+</ul></li>
+</ul>
+<div class="warning">
+<p><strong>Warning</strong>: Redémarage du système sans le fichier iso d’installation.</p>
+</div>
+<h2 id="préparation-du-système"><span class="header-section-number">1.3</span> Préparation du système</h2>
+<h3 id="accès-sudo-pour-user"><span class="header-section-number">1.3.1</span> Accès <code>sudo</code> pour user</h3>
+<p>Pour simplifier la gestion du système, nous avons ajouter à <code>user</code> le groupe <code>sudo</code></p>
+<div class="info">
+<p>Passage en mode console : <code>Ctrl</code>+<code>Alt</code>+<code>F1</code></p>
+<p>Connexion en root: login = <code>root</code> et mot de passe = <code>root</code></p>
+</div>
+<pre class="shell"><code>sudo adduser user sudo</code></pre>
+<p><img src="img/adduser_user_sudo.png" /></p>
+<div class="warning">
+<p><strong>Warning</strong>: Rechargement de la session pour appliquer les changements.</p>
+</div>
+<h3 id="installation-des-suppléments-invités"><span class="header-section-number">1.3.2</span> Installation des suppléments invités</h3>
+<ul>
+<li>Montage du CD</li>
+</ul>
+<pre class="shell"><code>sudo mount /dev/cdrom/mnt</code></pre>
+<ul>
+<li>Installation des suppléments :</li>
+</ul>
+<pre class="shell"><code>sudo /mnt/VBoxLinuxAdditions.run</code></pre>
+<h2 id="culture-générale"><span class="header-section-number">1.4</span> Culture générale</h2>
+<h3 id="configuration-matérielle-dans-virtualbox"><span class="header-section-number">1.4.1</span> Configuration matérielle dans VirtualBox</h3>
+<h4 id="bit"><span class="header-section-number">1.4.1.1</span> 64-bit</h4>
+<ul>
+<li><p><strong>Q: Que signifie “64-bit” dans “Debian 64-bit” ?</strong></p></li>
+<li><p><strong>R:</strong> Représente le traitement des données et instructions que peut faire le système, ici, cela serait par paquets de 64 bits.</p></li>
+<li><p><strong>Q: Quelle est la configuration réseau utilisée par défaut ?</strong></p></li>
+<li><p><strong>R:</strong> La configuration réseau utilisée par défaut:</p></li>
+</ul>
+<p><img src="img/network.png" /></p>
+<ul>
+<li><p><strong>Q: Quel est le nom du fichier XML contenant la configuration de votre machine ?</strong></p></li>
+<li><p><strong>R:</strong> Le nom du fichier est sae203.vbox.</p></li>
+<li><p><strong>Q: Sauriez-vous le modifier directement ce fichier pour mettre 2 processeurs à votre machine ?</strong></p></li>
+<li><p><strong>R:</strong> Oui, il suffit de modifier la valeur de la variable “CPU count” qui est par défaut à 1 et la mettre à 2.</p></li>
+</ul>
+<p><img src="img/cpu_count.jpg" width="500" /></p>
+<h3 id="installation-os-de-base"><span class="header-section-number">1.4.2</span> Installation OS de base</h3>
+<h4 id="un-fichier-iso-bootable"><span class="header-section-number">1.4.2.1</span> Un fichier iso bootable</h4>
+<ul>
+<li><p><strong>Q: Qu’est-ce qu’un fichier iso bootable ?</strong></p></li>
+<li><p><strong>R:</strong> Un fichier image créé à partir d’un CD ou d’un DVD auquel on peut faire démarrer une machine dessus.</p></li>
+</ul>
+<h4 id="mate-gnome"><span class="header-section-number">1.4.2.2</span> MATE / GNOME</h4>
+<ul>
+<li><strong>Q: Qu’est-ce que MATE ? GNOME ?</strong></li>
+<li><strong>R:</strong> Environnement de bureau</li>
+</ul>
+<p><strong>Source :</strong> <a href="https://wiki.debian.org/fr/MATE">MATE</a>, <a href="https://wiki.debian.org/fr/Gnome">GNOME</a></p>
+<h4 id="serveur-web"><span class="header-section-number">1.4.2.3</span> Serveur web</h4>
+<ul>
+<li><strong>Q: Qu’est-ce qu’un serveur web ?</strong></li>
+<li><strong>R:</strong> Un logiciel qui comprend les URL et le protocole HTTP.</li>
+</ul>
+<p><strong>Source :</strong> <a href="https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server">Mozilla</a></p>
+<h4 id="serveur-ssh"><span class="header-section-number">1.4.2.4</span> Serveur SSH</h4>
+<ul>
+<li><strong>Q: Qu’est-ce qu’un serveur ssh ?</strong></li>
+<li><strong>R:</strong> Un protocole qui facilite les connexions sécurisées entre deux systèmes à l’aide d’une architecture client/serveur et permet aux utilisateurs de se connecter à distance à des systèmes hôte de serveurs.</li>
+</ul>
+<h4 id="serveur-mandataire"><span class="header-section-number">1.4.2.5</span> Serveur mandataire</h4>
+<ul>
+<li><strong>Q: Qu’est-ce qu’un serveur mandataire ?</strong></li>
+<li><strong>R:</strong> Un serveur informatique qui a pour fonction de relayer des requêtes entre un poste client et un serveur.</li>
+</ul>
+<h3 id="préparation-du-système-1"><span class="header-section-number">1.4.3</span> Préparation du système</h3>
+<h4 id="sudo"><span class="header-section-number">1.4.3.1</span> Sudo</h4>
+<ul>
+<li><p><strong>Q: Comment peux-ton savoir à quels groupes appartient l’utilisateur user ?</strong></p></li>
+<li><p><strong>R:</strong> Grâce à la commande :</p></li>
+</ul>
+<pre class="shell"><code>groups</code></pre>
+<p><img src="img/groups.png" /></p>
+<h3 id="suppléments-invités"><span class="header-section-number">1.4.4</span> Suppléments invités</h3>
+<h4 id="version-du-noyau-linux"><span class="header-section-number">1.4.4.1</span> Version du noyau Linux</h4>
+<ul>
+<li><p><strong>Q: Quel est la version du noyau Linux utilisé par votre VM ?</strong></p></li>
+<li><p><strong>R:</strong> La version du noyau Linux utilisé est 11.6.0</p></li>
+</ul>
+<h4 id="utilités-suppléments-invités"><span class="header-section-number">1.4.4.2</span> Utilités suppléments invités</h4>
+<ul>
+<li><p><strong>Q: À quoi servent les suppléments invités ?</strong></p></li>
+<li><p><strong>R:</strong> Ils contiennent des pilotes de périphériques et des applications système qui optimisent le système d’exploitation ou améliore l’interaction entre la machine hôte et invitée ; Par exemple la connexion automatisée ou l’intégration du pointeur de la souris.</p></li>
+</ul>
+<p><strong>Sources :</strong> <a href="https://docs.oracle.com/cd/E26217_01/E35193/html/qs-guest-additions.html">Oracle</a></p>
+<h4 id="mount"><span class="header-section-number">1.4.4.3</span> Mount ?</h4>
+<ul>
+<li><p><strong>Q: À quoi sert la commande <code>mount</code> ?</strong></p></li>
+<li><p><strong>R:</strong> Sert à monter un système de fichier sur un répertoire donné en paramètre ce qui rendra le système de fichier accessible.</p></li>
+</ul>
+<p><strong>Sources :</strong> <a href="https://www.ibm.com/docs/fr/power8?topic=commands-mount-command">IBM</a></p>
+<h1 id="installation-debian-automatisée-par-pré-configuration"><span class="header-section-number">2</span> Installation Debian automatisée par pré-configuration</h1>
+<h2 id="à-propos-de-la-distribution-debian"><span class="header-section-number">2.1</span> À propos de la distribution Debian</h2>
+<ul>
+<li><p><strong>Q: Qu’est-ce que le Projet Debian ? D’où vient le nom Debian ?</strong></p></li>
+<li><p><strong>R:</strong> C’est l’association d’individus qui ont eu pour but de créer un système d’exploitation libre. Le nom Debian vient des noms du créateur de Debian, Ian Murdock, et de sa femme, Debra.</p></li>
+</ul>
+<p><strong>Source :</strong> <a href="https://www.debian.org/intro/about">Debian</a></p>
+<h3 id="la-maintenance"><span class="header-section-number">2.1.1</span> La maintenance</h3>
+<p> Il existe 3 durées de prise en charge (support) de ces versions : la durée minimale, la durée en support long terme (LTS) et la durée en support long terme étendue (ELTS).</p>
+<ul>
+<li><p><strong>Q: Quelle sont les durées de ces prises en charge ?</strong></p></li>
+<li><p><strong>R:</strong> La durée minimale est la date de publication de la prochaine version stable + 1 an La durée en support long terme (LTS) est d’au moins 5 ans et 5 ans de plus pour une ELTS.</p></li>
+</ul>
+<p><strong>Sources :</strong> Debian <a href="https://wiki.debian.org/fr/DebianReleases">durée minimale</a> <a href="https://wiki.debian.org/fr/LTS">LTS</a> <a href="https://wiki.debian.org/fr/LTS/Extended">ELTS</a></p>
+<hr />
+<ul>
+<li><p><strong>Q: Pendant combien de temps les mises à jour de sécurité seront-elles fournies ?</strong></p></li>
+<li><p><strong>R:</strong> Environ une année après que la version stable suivante a été publiée.</p></li>
+</ul>
+<p><strong>Source :</strong> <a href="https://www.debian.org/security/faq.fr.html">Debian</a></p>
+<h3 id="nom-générique-nom-de-code-et-version"><span class="header-section-number">2.1.2</span> Nom générique, nom de code et version</h3>
+<ul>
+<li><p><strong>Q: Combien de version au minimum sont activement maintenues par Debian ?</strong></p></li>
+<li><p><strong>R:</strong> Au moins trois versions: stable, testing, unstable</p></li>
+</ul>
+<p><strong>Source :</strong> <a href="https://www.debian.org/releases/index.fr.html">Debian</a></p>
+<hr />
+<ul>
+<li><p><strong>Q: D’où viennent les noms de code données aux distributions ?</strong></p></li>
+<li><p><strong>R:</strong> Les noms de code proviennent des personnages des films <em>“Toy Story”</em>.</p></li>
+</ul>
+<p><strong>Source :</strong> <a href="https://www.debian.org/doc/manuals/debian-faq/ftparchives#sourceforcodenames">Debian</a></p>
+<hr />
+<ul>
+<li><p><strong>Q: Combien et lesquelles sont prises en charge par la version Bullseye ?</strong></p></li>
+<li><strong>R:</strong> 9 architectures:
+<ul>
+<li>AMD64 &amp; Intel 64</li>
+<li>Intel x86-based</li>
+<li>ARM</li>
+<li>ARM avec matériel FPU</li>
+<li>ARM 64 bits</li>
+<li>MIPS 64 bits</li>
+<li>MIPS 32 bits</li>
+<li>Power Systems</li>
+<li>IBM S/390 64 bits</li>
+</ul></li>
+</ul>
+<p><strong>Source :</strong> <a href="https://www.debian.org/releases/stable/i386/ch02s01.fr.html">Debian</a></p>
+<h3 id="première-version-avec-un-nom-de-code"><span class="header-section-number">2.1.3</span> Première version avec un nom de code</h3>
+<ul>
+<li><p><strong>Q: Quelle a était le premier nom de code utilisé ?</strong></p></li>
+<li><p><strong>R:</strong> Nom de code: Buzz</p></li>
+</ul>
+<hr />
+<ul>
+<li><p><strong>Q: Quand a-t-il été annoncé ?</strong></p></li>
+<li><p><strong>R:</strong> Annoncé le 17 juin 1996.</p></li>
+</ul>
+<hr />
+<ul>
+<li><p><strong>Q: Quelle était le numéro de version de cette distribution ?</strong></p></li>
+<li><p><strong>R:</strong> Sous le numéro de version Debian GNU/Linux 1.1.</p></li>
+</ul>
+<p><strong>Source :</strong> <a href="https://wiki.debian.org/fr/DebianBuzz">Debian</a></p>
+<h3 id="dernière-nom-de-code-attribué"><span class="header-section-number">2.1.4</span> Dernière nom de code attribué</h3>
+<ul>
+<li><p><strong>Q: Quel est le dernier nom de code annoncée à ce jour ?</strong></p></li>
+<li><p><strong>R:</strong> Nom de code: Bullseye</p></li>
+</ul>
+<hr />
+<ul>
+<li><p><strong>Q: Quand a-t-il été annoncé ?</strong></p></li>
+<li><p><strong>R:</strong> Annoncé le 14 août 2021.</p></li>
+</ul>
+<hr />
+<ul>
+<li><p><strong>Q: Quelle est la version de cette distribution ?</strong></p></li>
+<li><p><strong>R:</strong> La première version de la distribution est la version 11.0 et sa dernière mise à jour est la version 11.6.</p></li>
+</ul>
+<p><strong>Source :</strong> <a href="https://wiki.debian.org/fr/DebianTrixie">Debian</a></p>
+<h2 id="installation-préconfigurée"><span class="header-section-number">2.2</span> Installation préconfigurée</h2>
+<p>Etant donné que l’image iso d’installation <em>Debian 11.6</em> posséde une option avancée qui permet d’automatiser l’installation, rien n’est à faire. Après avoir récupéré l’archive <code>autoinstall.zip</code>;</p>
+<div class="box">
+<p>Executé la commande suivante:</p>
+<pre class="shell"><code>sed -i -E &quot;s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat
+/proc/sys/kernel/random/uuid)/&quot; S203-Debian11.viso</code></pre>
+</div>
+<p>Et inséré le fichier <code>S203_Debian11.viso</code> dans le lecteur optique de la machine virtuelle, Il ne restait plus qu’à démarrer la machine virtuelle et laisser l’installation se dérouler.</p>
+<p>Pour modifier notre configuration dans le fichier <code>preseed-fr.cfg</code>:</p>
+<div class="info">
+<p>Ajout droit sudo:</p>
+<pre class="shell"><code>d-i passwd/user-default-groups string audio cdrom video sudo</code></pre>
+</div>
+<div class="info">
+<p>Installation MATE ainsi que différénts paquets:</p>
+<pre class="shell"><code>tasksel tasksel/first multiselect standard ssh-server mate-desktop
+d-i pkgsel/include string git, sqlite3, curl, bash-completion, neofetch</code></pre>
+</div>
+<h1 id="gitea"><span class="header-section-number">3</span> Gitea</h1>
+<h2 id="préliminaire"><span class="header-section-number">3.1</span> Préliminaire</h2>
+<div class="info">
+<p>Après avoir executé les commandes suivantes:</p>
+<pre class="shell"><code>git config --global user.name &quot;Kellian Mirey&quot;
+git config --global user.email &quot;kellian.mirey.etu@univ-lille.fr&quot;
+git config --global init.defaultBranch &quot;master&quot;</code></pre>
+</div>
+<h3 id="configuration-globale-de-git"><span class="header-section-number">3.1.1</span> Configuration globale de git</h3>
+<ul>
+<li><p><strong>Q: Qu’est-ce que le logiciel git-gui ?</strong></p></li>
+<li><p><strong>R:</strong> git-gui est l’interface graphique intégré à la commande git via la commande suivante: <code>git gui [&lt;command&gt;] [&lt;arguments&gt;]</code></p></li>
+</ul>
+<p><strong>Source:</strong> <a href="https://git-scm.com/docs/git-gui" class="uri">https://git-scm.com/docs/git-gui</a></p>
+<hr />
+<ul>
+<li><p><strong>Q: Qu’est-ce que le logiciel gitk ?</strong></p></li>
+<li><p><strong>R:</strong> gitk est une interface graphique de git permettant de visualiser l’historique des commits sous forme de graphe. <code>gitk &amp;</code> dans le même répertoire que le projet.</p></li>
+</ul>
+<p><strong>Source:</strong> <a href="https://git-scm.com/docs/gitk" class="uri">https://git-scm.com/docs/gitk</a></p>
+<hr />
+<ul>
+<li><p><strong>Q: Quelle sera la ligne de commande git pour utiliser par défaut le proxy de l’université sur tous vos projets git ?</strong></p></li>
+<li><p><strong>R:</strong> <code>git config --global http.proxy</code></p></li>
+</ul>
+<p><strong>Source:</strong> <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy" class="uri">https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy</a></p>
+<h3 id="accéder-au-port-3000"><span class="header-section-number">3.1.2</span> Accéder au port 3000</h3>
+<p>Redirection de port à faire sur l’interface graphique de VM.</p>
+<h2 id="installation-de-gitea"><span class="header-section-number">3.2</span> Installation de Gitea</h2>
+<ul>
+<li><p><strong>Q: Qu’est-ce que Gitea ?</strong></p></li>
+<li><p><strong>R:</strong> Gitea est un client git web avec la possibilité d’héberger sa propre instance de Gitea sur son propre serveur.</p></li>
+</ul>
+<p><strong>Source:</strong> <a href="https://docs.gitea.io/fr-fr/" class="uri">https://docs.gitea.io/fr-fr/</a></p>
+<hr />
+<ul>
+<li><p><strong>Q: A quels logiciels bien connus dans ce domaine peut-on le comparer ?</strong></p></li>
+<li><p><strong>R:</strong> Gitea est similaire à GitHub, GitLab</p></li>
+</ul>
+<p><strong>Source:</strong> <a href="https://docs.gitea.io/fr-fr/" class="uri">https://docs.gitea.io/fr-fr/</a></p>
+<h3 id="installation-du-binaire"><span class="header-section-number">3.2.1</span> Installation du binaire</h3>
+<ol type="1">
+<li>Récupérer le fichier binaire de la version 1.18.5</li>
+<li>Ajout d’un utilisateur <code>git</code> et configurations des droits de l’utilisateur et de l’accès à ces fichiers</li>
+<li>Déplace l’executable dans <code>/usr/bin</code></li>
+</ol>
+<h3 id="démarrage-automatique-du-service"><span class="header-section-number">3.2.2</span> Démarrage automatique du service</h3>
+<p>La commande <code>sudo systemctl enable gitea</code> fera en sorte que gitea soit lancé automatiquement à chaque démarrage de la machine.</p>
+<h3 id="paramãtrage-de-gitea"><span class="header-section-number">3.2.3</span> ParamÃ©trage de Gitea</h3>
+<div class="box">
+<p>On vérifie que le service est bien démarré:</p>
+<pre class="shell"><code>systemctl status gitea.service</code></pre>
+</div>
+<p>En ce rendant sur l’url <a href="http://localhost:3000" class="uri">http://localhost:3000</a>, on obtient bien le résultat voulu.</p>
+<p><img src="./img/gitea_launch.png" /></p>
+<div class="warning">
+<p>Ne pas oublier de changer les permissions des chemins <code>/etc/gitea</code> et <code>/etc/gitea/app.ini</code>.</p>
+</div>
+<ul>
+<li><p><strong>Q: Comment faire pour la mettre Ã  jour sans devoir tout reconfigurer ?</strong></p></li>
+<li><p><strong>R:</strong> Un fichier shell <code>upgrade.sh</code> nous est mis à disposition par gitea qui permet d’automatiser la mise à jour disponible sur le github: <a href="https://github.com/go-gitea/gitea/blob/main/contrib/upgrade.sh" class="uri">https://github.com/go-gitea/gitea/blob/main/contrib/upgrade.sh</a>. Il suffit d’entrer la commande correspondante comme ci-dessous:</p></li>
+</ul>
+<p><strong>Source:</strong> <a href="https://docs.gitea.io/en-us/upgrade-from-gitea/#upgrade-from-binary">Gitea</a></p>
+<pre class="shell"><code>sudo ./upgrade.sh -v 1.19</code></pre>
+<h2 id="utilisation-basique"><span class="header-section-number">3.3</span> Utilisation basique</h2>
+<div class="info">
+<p>Clone du projet <code>dev-oo</code> d’un membre de l’équipe:</p>
+<pre class="shell"><code>git clone https://gitlab.univ-lille.fr/atilla.tas.etu/dev-oo &amp;&amp; cd dev-oo
+git remote remove origin
+git remote add origin http://localhost:3000/gitea/dev-oo
+git branch -m main master
+git push origin master</code></pre>
+</div>
+<div class="info">
+<p>Création d’un projet pour les rapports de la SAE:</p>
+<pre class="shell"><code>git init
+git remote add origin http://localhost:3000/gitea/sae2.03
+git add .
+git commit -m &quot;Initial commit&quot;
+git push origin master</code></pre>
+</div>
+</body>
+</html>
